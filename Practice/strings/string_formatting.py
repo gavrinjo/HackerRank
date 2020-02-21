@@ -1,15 +1,13 @@
-n = int(8)
+# TODO: String Formatting
 
-print(bin(n)[2::])
-print(hex(n)[2::].upper())
-print(oct(n)[2::])
+# HackerRank STDIN parameters test case 0
+# n = int(2)
+
+def print_formatted(n):
+    for i in range(1, n+1):
+        print("{0:{w}} {0:{w}o} {0:{w}x} {0:{w}b}" .format(i, w=len(bin(n)[2::])))
 
 
-nums = ([f"{x} {oct(x)[2::]} {hex(x)[2::].upper()} {bin(x)[2::]}" for x in range(n)])
-print("\n".join(nums))
-
-for i in range(n):
-    b = bin(i)[2::].rjust(len(bin(n)[2::]), " ")
-    h = hex(i)[2::].upper().rjust(len(bin(n)[2::]), " ")
-    o = oct(i)[2::].rjust(len(bin(n)[2::]), " ")
-    print(f"{i} {h} {o} {b}")
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(n)
