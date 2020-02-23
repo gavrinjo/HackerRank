@@ -15,6 +15,8 @@ import sys
 if __name__ == '__main__':
     n = int(input())
     lis = "".join(bin(n)[2::]).split("0")
-    lis = sorted(lis)
-    lis.reverse()
-    print(eval("+".join(lis[0])))
+    # lis = sorted(lis)
+    # lis.reverse()
+    # print(eval("+".join(lis[0])))
+    print(max(lis))
+
