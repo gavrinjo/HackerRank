@@ -48,9 +48,10 @@ class Student(Person):
     #
     # Write your constructor here
     def __init__(self, firstName, lastName, idNumber, scores):
-        self.firstName = firstName
-        self.lastName = lastName
-        self.idNumber = idNumber
+        Person.__init__(self, firstName, lastName, idNumber)
+        # self.firstName = firstName
+        # self.lastName = lastName
+        # self.idNumber = idNumber
         self.scores = scores
 
     #   Function Name: calculate
