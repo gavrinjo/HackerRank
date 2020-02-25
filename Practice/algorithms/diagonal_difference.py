@@ -18,7 +18,7 @@ def diagonalDifference(arr):
     for i in range(n):
         d1 += arr[i][i]
         d2 += arr[i][-i-1]
-    return abs(d1- d2)
+    return abs(d1 - d2)
 
 if __name__ == '__main__':
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')

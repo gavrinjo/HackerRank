@@ -10,16 +10,23 @@ Constraints
 1=<elements[i]=<100, where 0=<i=<N-1
 
 """
+
+
 class Difference:
     def __init__(self, a):
         self.__elements = a
+        self.maximumDifference = self.computeDifference()
 
     # Add your code here
     def computeDifference(self):
-        pass
+        res = []
+        for i in range(len(self.__elements)):
+            for j in range(len(self.__elements)):
+                res.append(abs(self.__elements[i] - self.__elements[j]))
 
-    def maximumDifference(self):
-        pass
+        res.sort()
+        res.reverse()
+        return res[0]
 
 
 # End of Difference class
