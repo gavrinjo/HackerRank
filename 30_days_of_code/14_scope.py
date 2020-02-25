@@ -14,7 +14,13 @@ class Difference:
     def __init__(self, a):
         self.__elements = a
 
-	# Add your code here
+    # Add your code here
+    def computeDifference(self):
+        pass
+
+    def maximumDifference(self):
+        pass
+
 
 # End of Difference class
 
@@ -23,5 +29,5 @@ a = [int(e) for e in input().split(' ')]
 
 d = Difference(a)
 d.computeDifference()
-
+print(a)
 print(d.maximumDifference)
