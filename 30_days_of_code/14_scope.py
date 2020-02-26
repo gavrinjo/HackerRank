@@ -19,6 +19,7 @@ class Difference:
 
     # Add your code here
     def computeDifference(self):
+        """
         res = []
         for i in range(len(self.__elements)):
             for j in range(len(self.__elements)):
@@ -27,6 +28,9 @@ class Difference:
         res.sort()
         res.reverse()
         return res[0]
+        """
+        # self.__elements.sort()
+        return max(self.__elements) - min(self.__elements)
 
 
 # End of Difference class
@@ -36,5 +40,4 @@ a = [int(e) for e in input().split(' ')]
 
 d = Difference(a)
 d.computeDifference()
-print(a)
 print(d.maximumDifference)
