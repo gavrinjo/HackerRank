@@ -1,6 +1,7 @@
 # TODO: Day 16: Exceptions - String to Integer
 
-"""TODO: Objective
+"""
+TODO: Objective
 Today, we're getting started with Exceptions by learning how to parse an integer from a string and
 print a custom error message. Check out the Tutorial tab for learning materials and an instructional video!
 
@@ -13,7 +14,6 @@ you attempt to use loops/conditional statements, you will get a 0 score.
 """
 
 import sys
-
 
 S = input().strip()
 
