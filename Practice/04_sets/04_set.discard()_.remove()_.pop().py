@@ -29,7 +29,7 @@ for _ in range(l):
     x = input().split()
     command = x[0]
     argument = x[1:]
-    eval("s.{}{}".format(command, tuple(map(int,argument))))
+    eval("s.{}{}".format(command, tuple(map(int, argument))))
 
 print(sum(s))
 
