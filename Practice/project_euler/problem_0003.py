@@ -10,7 +10,7 @@ from math import sqrt, floor
 
 # n = int(input("enter number of prime numbers you want to print out?\n"))
 
-
+"""
 def isPrime(n):
     if n == 2:
         return True
@@ -52,3 +52,29 @@ def fList(n):
 
 
 print(max(fList(int(input()))))
+"""
+
+
+def calculate(n):
+    k = n
+    while True:
+        p = minPrime(k)
+        if p < k:
+            k //= p
+        else:
+            return k
+
+
+def minPrime(n):
+    assert n >= 2
+    for i in range(3, floor(sqrt(n)) + 1):
+        if n % i == 0:
+            return i
+    return n
+
+
+
+
+if __name__ == '__main__':
+    num = int(input())
+    print(calculate(num))
