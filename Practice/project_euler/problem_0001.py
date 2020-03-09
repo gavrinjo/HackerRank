@@ -6,10 +6,15 @@ The sum of these multiples is 23.
 Find the sum of all the multiples of 3 or 5 below 1000.
 """
 
-n = int(1000)
-l = []
-for i in range(1, n):
-    if i % 3 == 0 or i % 5 == 0:
-        l.append(i)
 
-print(sum(l))
+def calculate(n):
+    res = 0
+    for i in range(n):
+        if i % 3 == 0 or i % 5 == 0:
+            res += i
+    return res
+
+
+if __name__ == '__main__':
+    num = int(input())
+    print(calculate(num))

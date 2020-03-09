@@ -9,8 +9,9 @@ the first 10 terms will be:
 By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the
 even-valued terms.
 """
-
-n = int(400000)
+"""
+my first solution!!!
+n = int(4000000)
 l = [1, 2]
 i = 2
 while i:
@@ -19,5 +20,26 @@ while i:
     else:
         l.append(l[i - 1] + l[i - 2])
         i += 1
+k = 0
+for j in l:
+    if j % 2 == 0:
+        k += j
 
-print(max(l))
+print(k)
+"""
+
+
+def calculate():
+    res = 0
+    a = 1
+    b = 2
+    while a <= 10:
+        if a % 2 == 0:
+            res += a
+        a, b = b, a + b
+
+    return res
+
+
+if __name__ == "__main__":
+    print(calculate())

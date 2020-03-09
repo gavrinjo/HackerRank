@@ -5,10 +5,10 @@ The prime factors of 13195 are 5, 7, 13 and 29.
 What is the largest prime factor of the number 600851475143 ?
 """
 
-#n = int(13195)
-from math import sqrt
+# n = int(13195)
+from math import sqrt, floor
 
-n = int(input("enter number of prime numbers you want to print out?\n"))
+# n = int(input("enter number of prime numbers you want to print out?\n"))
 
 
 def isPrime(n):
@@ -25,20 +25,30 @@ def isPrime(n):
 
 def primesList(num):
     primes = [2, ]
-    noPrimes = 1
+    # noPrimes = 1
     testNum = 3
 
-    while noPrimes < num:
+    while testNum < floor(sqrt(num))+1:
         if isPrime(testNum):
             primes.append(testNum)
-            noPrimes += 1
+            # noPrimes += 1
         testNum += 1
     return primes
 
 
 def fList(n):
-    pass
+    res = []
+    plist = sorted(primesList(n))
+    x = n
+    for i in plist:
+        if x % i == 0:
+            x = x / i
+            res.append(i)
+            # print(res)
+        else:
+            continue
+
+    return res
 
 
-
-print(list(primesList(n)))
+print(max(fList(int(input()))))
