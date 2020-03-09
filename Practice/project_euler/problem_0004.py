@@ -1,10 +1,7 @@
 
 
 def calculate(n):
-    s = []
-    for i in range(d):
-        s.append("9")
-    return int("".join(s))
+    return int(d * "9")
 
 
 if __name__ == '__main__':
