@@ -31,6 +31,11 @@ def isPalindrome(n):
     return True
 
 
+def compute(): # drugo riješenje, kompaktno ali ne čitljivo.
+    ans = max(i * j for i in range(9000, 10000) for j in range(9000, 10000) if str(i * j) == str(i * j)[::-1])
+    return str(ans)
+
+
 if __name__ == '__main__':
     nDigits = int(input())
     num = int("9" * nDigits)
