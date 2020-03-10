@@ -1,8 +1,17 @@
+import math
 
 
 def compute():
-    ans = max(i * j for i in range(9000, 10000) for j in range(9000, 10000) if str(i * j) == str(i * j)[::-1])
-    return str(ans)
+    x = 1
+    for i in range(1, 21):
+        x *= i // math.gcd(i, x)
+    return x
+    # moje prvo rješenje!!! ne baš dobro!!!
+    # while True:
+    #     if all(x % y == 0 for y in range(1, 11)):
+    #         break
+    #     else:
+    #         x += 1
 
 
 if __name__ == "__main__":
